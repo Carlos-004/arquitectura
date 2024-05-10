@@ -1,0 +1,79 @@
+@use "../base/variables" as  v;
+@use "../base/mixins" as m;
+
+.footer{
+    background-image: url("../../img/footer_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center  center;
+    background-size: cover;
+    height: 400px;
+    margin-top: 40px;
+    
+
+    .contenido{
+        padding: 120px 0;
+        @include m.telefono{
+            padding: 10px;
+        }
+        .barra{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include m.telefono{
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .logo{
+                .nombre-sitio{
+                    color: v.$blanco;
+                    font-weight: 300;
+                    
+                    span{
+                        font-weight: 900;
+                    }
+                }
+            }
+    
+            .contacto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                .telefono{
+                    display: flex;
+                    align-items: center;
+                    align-self: flex-end;
+                    color: v.$blanco;
+                    
+                }
+                .telefono::before {
+                    content: '';
+                    display: block;
+                    width: 35px;
+                    height: 4rem;
+                    background-image: url("../../img/telefono.png");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    margin-right: 10px;
+                }
+
+                .navegacion{
+                    @include m.telefono{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright{
+        color: v.$blanco;
+        text-align: center;
+        background-color: v.$negro;
+        padding: 15px;
+        font-size: 20px;
+    }
+}

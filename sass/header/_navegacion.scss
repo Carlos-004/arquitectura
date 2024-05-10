@@ -1,0 +1,25 @@
+@use "../base/variables" as  v;
+@use "../base/mixins" as m;
+
+
+.navegacion{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+
+    .link{
+        padding: 15px;
+        color: v.$blanco;
+        font-size: 17px;
+
+        &:hover{
+            background-color: v.$transparente;
+        }
+    }
+
+    @include m.telefono{
+        align-self: unset;
+        flex-direction: column;
+    }
+    
+}

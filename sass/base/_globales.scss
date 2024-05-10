@@ -1,0 +1,38 @@
+@use "./variables" as v;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    font-family: v.$texto-universal;
+}
+img{
+    width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3{
+    font-weight: 900;
+    line-height: 1.2;
+}
+h1{
+    font-size: 44px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 28px;
+}
+.contenido{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.titulos-center{
+    text-align: center;
+}
