@@ -1,0 +1,42 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:  v.$text-body;
+    font-size: 16px;
+}
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 1px 0 40px 0;
+}
+
+h1{
+    font-size: 48px;
+}
+@include m.tablet{
+    h1{
+        font-size: 34px;
+    }
+}
+h2 {
+    font-size: 58px;
+}
+h3 {
+    font-size: 40px;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}

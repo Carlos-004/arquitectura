@@ -1,0 +1,39 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nosotros{
+    margin-top: 90px;
+    background-image: url("../../img/nosotros.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+    @include m.telefono{
+        position: unset;
+    }
+    @include m.desktop{
+        @include m.grid(3,0);
+    }
+
+    
+    .nosotros__info{
+        position: absolute;
+        background-color: v.$blanco;
+        padding: 40px;
+        margin: -40px;
+        
+        @include m.desktop{
+            grid-column: 2/4;
+            margin: -80px;
+        }
+        @include m.tablet{
+            grid-column: unset;
+            margin: -20px;
+        }
+
+        p{
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+    }
+}

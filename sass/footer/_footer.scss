@@ -1,0 +1,38 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer{
+    margin-top: 40px;
+    background-image: url("../../img/footer_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+
+    .barra{
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include m.telefono{
+            flex-direction: column;
+            justify-content: unset;
+        }
+
+        .logo{
+            .nombre-sitio{
+                color: v.$blanco;
+                font-weight: 300;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .copyright{
+        background-color: v.$negro;
+        color: v.$blanco;
+        text-align: center;
+        padding: 15px;
+    }
+}
